@@ -1,0 +1,30 @@
+.pagination {
+	margin-top: 20px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.pagination__wrapper {
+	width: 200px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.pagination__button {
+	background: none;
+	border: none;
+	outline: 0;
+
+	font-size: 24px;
+	font-weight: 600;
+
+	cursor: pointer;
+}
+
+button:disabled {
+	cursor: not-allowed;
+}

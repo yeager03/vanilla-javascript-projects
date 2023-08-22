@@ -1,0 +1,27 @@
+.book-list {
+	margin-top: 30px;
+}
+
+.book-list__title {
+	font-size: 25px;
+	font-weight: 600;
+	line-height: 32px;
+}
+
+.book-grid {
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+}
+
+.book-list--loading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.book-list--loading img {
+	width: 60px;
+	height: 60px;
+}

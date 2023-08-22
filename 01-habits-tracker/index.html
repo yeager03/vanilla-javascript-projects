@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Habits tracker</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400;600&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="css/style.min.css" />
+	</head>
+	<body>
+		<div class="app">
+			<aside class="panel">
+				<a href="#" class="logo panel__logo">
+					<img src="images/logo.svg" alt="Logo: Habit tracker logo" class="logo__image" />
+				</a>
+
+				<nav class="menu">
+					<ul class="menu__list"></ul>
+					<button class="menu__add" onclick="togglePopup()">
+						<img src="images/add.svg" alt="Icon: Add icon" />
+					</button>
+				</nav>
+			</aside>
+			<main class="main">
+				<header class="header">
+					<h1 class="header__title">-</h1>
+					<div class="progress">
+						<div class="progress__text">
+							<h3 class="progress__title">Прогресс</h3>
+							<span class="progress__percent">%</span>
+						</div>
+						<div class="progress-bar">
+							<div class="progress-bar__inner"></div>
+						</div>
+					</div>
+				</header>
+				<div class="content">
+					<div class="habit__items"></div>
+					<div class="habit habit__next-day">
+						<span class="habit__day">День _</span>
+						<div class="habit__comment">
+							<div class="habit-form">
+								<img src="images/comment.svg" alt="Icon: Comment icon" class="habit-form__icon" />
+								<input type="text" placeholder="Комментарий" class="habit-form__input" />
+							</div>
+						</div>
+						<button class="habit__button habit__button--add" disabled>Добавить</button>
+					</div>
+				</div>
+			</main>
+		</div>
+		<div class="cover cover--hidden">
+			<div class="popup">
+				<h3 class="popup__title">Новая привычка</h3>
+				<span class="popup__subtitle">Иконка</span>
+				<ul class="popup__list">
+					<li class="popup__item popup__item--active" onclick="selectHabit(this,'sport')">
+						<img src="images/sport.svg" alt="Icon: sport icon" class="popup__icon" />
+					</li>
+					<li class="popup__item" onclick="selectHabit(this,'water')">
+						<img src="images/water.svg" alt="Icon: water icon" class="popup__icon" />
+					</li>
+					<li class="popup__item" onclick="selectHabit(this,'food')">
+						<img src="images/food.svg" alt="Icon: food icon" class="popup__icon" />
+					</li>
+				</ul>
+
+				<form class="popup__form" onsubmit="addHabit(event)">
+					<input type="text" name="title" placeholder="Название" class="popup__input" />
+					<input type="number" name="target" placeholder="Цель" class="popup__input" />
+					<input hidden type="hidden" name="habit" value="sport" />
+					<button class="popup__button">Добавить</button>
+				</form>
+
+				<button class="popup__close" onclick="togglePopup()">
+					<img src="images/close.svg" alt="Icon: close icon" />
+				</button>
+			</div>
+		</div>
+		<script src="scripts/app.js"></script>
+	</body>
+</html>
