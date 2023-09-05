@@ -1,0 +1,26 @@
+{
+  "applications": [
+    {
+      "name": "Alex",
+      "position": "Engineer",
+      "city": "London",
+      "email": "manjiro@gmail.com",
+      "phone": "2131231",
+      "id": 1
+    },
+    {
+      "name": "Mercer",
+      "email": "mercer@mail.ru",
+      "date": "2003-03-12",
+      "id": 2
+    },
+    {
+      "name": "arman",
+      "position": "Engineer",
+      "city": "New-York",
+      "email": "zekeyeager1966@gmail.com",
+      "phone": "",
+      "id": 3
+    }
+  ]
+}
